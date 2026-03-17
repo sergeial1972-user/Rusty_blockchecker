@@ -1,6 +1,10 @@
+//imports
+use std::sync::Mutex;
+
 //domain list
- pub let mut domains: Vec<Domain> = Vec::new();
+pub static DOMAINS: Mutex<Vec<Domain>> = Mutex::new(Vec::new());
 #[derive(Debug)]
+
 pub struct Domain {
     name: String,
     protocol: String,
